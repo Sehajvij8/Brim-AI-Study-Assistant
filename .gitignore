@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+
+# Environment Variables
+.env
+
+#Local Qdrant Database
+rag_backend/qdrant/
+
+#Testing pdfs
+rag_backend/test.pdf
+rag_backend/test2.pdf
