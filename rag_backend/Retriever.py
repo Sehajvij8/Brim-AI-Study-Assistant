@@ -1,7 +1,7 @@
-from Chunking import chunker
-from Embeddings import generate_embeddings
-from vector_store import store_embeddings
-from config import (
+from .Chunking import chunker
+from .Embeddings import generate_embeddings
+from .vector_store import store_embeddings
+from .config import (
     TOP_K,
     embedding_model,
     qdrant_client,
@@ -27,12 +27,11 @@ def retrieve_chunks(query):
                 }
             )
 
-            return retrieved_chunks
+        return retrieved_chunks
     except Exception as e:
         print(f"Retrieval_error {e}")
         return None
-    finally:
-        qdrant_client.close()
+    
     
     
 

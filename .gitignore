@@ -6,6 +6,10 @@ dist/
 wheels/
 *.egg-info/
 
+# Qdrant database files
+qdrant/
+rag_frontend/qdrant/
+
 # Virtual environments
 .venv/
 

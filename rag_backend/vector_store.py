@@ -1,6 +1,6 @@
-from config import (qdrant_client , COLLECTION_NAME)
-from Chunking import chunker
-from Embeddings import generate_embeddings
+from .config import (qdrant_client , COLLECTION_NAME)
+from .Chunking import chunker
+from .Embeddings import generate_embeddings
 # UUID = Universally Unique Identifier, used to generate unique IDs for each point in the Qdrant collection.
 import uuid
 from qdrant_client.models import (

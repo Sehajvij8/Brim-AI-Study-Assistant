@@ -1,5 +1,5 @@
-from Chunking import chunker
-from config import embedding_model
+from .Chunking import chunker
+from .config import embedding_model
 
 def generate_embeddings(chunks):
     """

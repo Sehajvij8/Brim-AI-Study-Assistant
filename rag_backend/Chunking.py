@@ -1,5 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from pdf_loader import pdf_to_text
+from .pdf_loader import pdf_to_text
 from pathlib import Path
 
 
