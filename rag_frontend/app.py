@@ -18,6 +18,10 @@ st.set_page_config(
     layout = "wide"
 )
 
+#Session state settings
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
 # Sidebar Settings
 with st.sidebar:
     st.title("🤖 Brim")
@@ -63,7 +67,8 @@ with st.sidebar:
 
                 #Check temporary path
                 st.success(f"{len(uploaded_files)} PDFs processed successfully.")
-        
+
+# HTML page settings        
     st.markdown("---")
     
     st.markdown(
@@ -101,8 +106,13 @@ st.title("🤖 Brim")
 st.caption("Your Intelligent AI Study Assistant")
 st.divider()
 
-# Question Selection
 
+#Old chat history
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# Question Selection
 question = st.text_input(
     "💬 Ask anything from your uploaded documents",
     placeholder="Example : What is Artificial Intelligence?"
@@ -115,6 +125,7 @@ with col1:
         use_container_width=True
         )
 
+
 st.divider()
 st.subheader("🤖Answer")
 
@@ -124,15 +135,18 @@ if ask_button:
         st.warning("⚠️ Please enter a question.")
     else:
         with st.spinner("🤔Brim is thinking...."):
-            result = rag_pipeline(question)
+            #Saving user message
+            st.session_state.messages.append({"role":"user" , "content":question})
+            result = rag_pipeline(question , st.session_state.messages)
             if result:
                 answer_placeholder.success(result["answer"])
+                st.session_state.messages.append({"role":"assistant" , "content": result["answer"]})
             
                 with st.expander("📄 Retrieved_context"):
 
                     for i , chunk in enumerate(result["chunks"] , start = 1):
                         st.markdown(f"###Chunk{i}")
-                        st.write(f"**Source:**{chunk["source"]}")
+                        st.write(f"**Source:**{chunk['source']}")
                         st.write(chunk["text"])
                         st.divider()
             else:

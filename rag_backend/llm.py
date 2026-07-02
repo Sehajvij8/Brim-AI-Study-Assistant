@@ -8,7 +8,7 @@ from .config import (
 
 
 
-def generate_answers(question , retrieved_chunks):
+def generate_answers(question , retrieved_chunks , chat_history):
     """
     Generates an answer using the retrieved chunks and Groq LLM.
     """
@@ -28,6 +28,14 @@ def generate_answers(question , retrieved_chunks):
     ==================================================
 
     """
+        history = ""
+        for message in chat_history:
+            history += (
+                f"{message['role'].capitalize()}:"
+                f"{message['content']}\n"
+            )
+
+    
 
 
 
@@ -60,12 +68,16 @@ def generate_answers(question , retrieved_chunks):
         user_prompt = f"""
         You are provided with the retrieved context from one or more uploaded documents.
 
+        {history}
+
         Instructions:
 
-        - Use ONLY the retrieved context.
-        - Never use your own knowledge.
-        - If the answer is not available, clearly say:
-        "I couldn't find this information in the uploaded documents."
+        1. First use the previous conversation if it contains the required information.
+        2. Then use the retrieved document context.
+        3. Never invent facts.
+        4. If the answer is present in either the conversation history or the retrieved context, answer it.
+        5. Only if it is missing from BOTH, reply:
+        "I couldn't find this information in the uploaded documents or previous conversation."
 
         -------------------- Retrieved Context --------------------
 

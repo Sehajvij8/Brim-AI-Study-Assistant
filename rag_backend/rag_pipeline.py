@@ -2,7 +2,7 @@ from .Retriever import retrieve_chunks
 from .llm import generate_answers
 from .config import qdrant_client
 
-def rag_pipeline(question):
+def rag_pipeline(question , chat_history):
     """
     Executes the complete RAG pipeline.
     """
@@ -23,7 +23,8 @@ def rag_pipeline(question):
 
         answer = generate_answers(
             question,
-            retrieved_chunks
+            retrieved_chunks,
+            chat_history
         )
 
         return {
