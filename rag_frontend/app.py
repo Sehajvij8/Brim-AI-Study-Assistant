@@ -27,6 +27,13 @@ with st.sidebar:
     st.title("🤖 Brim")
     st.markdown("---")
 
+#Creating clear chat button
+    clear_chat = st.button("🗑️ Clear Chat")
+    if clear_chat:
+        st.session_state.messages.clear()
+        st.rerun()
+        
+
 #Uploaded files settings
     uploaded_files = st.file_uploader("📄 Upload your PDF(s)",
                                       type = ["PDF"],

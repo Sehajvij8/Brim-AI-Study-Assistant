@@ -29,7 +29,7 @@ def generate_answers(question , retrieved_chunks , chat_history):
 
     """
         history = ""
-        for message in chat_history:
+        for message in chat_history[-6:]:  # Limit to last 6 messages
             history += (
                 f"{message['role'].capitalize()}:"
                 f"{message['content']}\n"
