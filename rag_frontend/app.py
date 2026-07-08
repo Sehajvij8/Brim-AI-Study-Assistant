@@ -11,12 +11,26 @@ from rag_backend.vector_store import store_embeddings
 from rag_backend.rag_pipeline import rag_pipeline
 from rag_backend.Embeddings import generate_embeddings
 
+# Loading CSS file
+from pathlib import Path
+
+def load_css():
+    css_path = Path(__file__).parent / "styles.css"
+
+    with open(css_path, "r", encoding="utf-8") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
 # Page config settings
 st.set_page_config(
     page_title = "Brim",
     page_icon = "🤖",
     layout = "wide"
 )
+# Load CSS
+load_css()
+
 
 #Session state settings
 if "messages" not in st.session_state:

@@ -1,0 +1,80 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Whole App */
+html, body, [class*="css"]{
+    font-family: "Poppins", sans-serif;
+}
+
+/* Main Background */
+.stApp{
+    background:
+    radial-gradient(circle at top left,#7c3aed22,transparent 40%),
+    radial-gradient(circle at bottom right,#3b82f622,transparent 40%),
+    linear-gradient(135deg,#0f172a,#111827,#020617);
+
+    background-attachment:fixed;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"]{
+
+    background:rgba(18,25,40,.75);
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+    border-right:1px solid rgba(255,255,255,.10);
+
+    box-shadow:0 0 30px rgba(0,0,0,.35);
+
+}
+
+/* Buttons */
+.stButton button{
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        90deg,
+        #7c3aed,
+        #3b82f6
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(124,58,237,.25);
+
+}
+
+.stButton button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(59,130,246,.35);
+
+}
+
+.stButton > button:hover{
+    transform:scale(1.03);
+}
+
+/* Text Input */
+.stTextInput input{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:16px;
+
+    color:white;
+
+}
