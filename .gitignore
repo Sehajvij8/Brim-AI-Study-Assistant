@@ -22,3 +22,8 @@ rag_backend/qdrant/
 #Testing pdfs
 rag_backend/test.pdf
 rag_backend/test2.pdf
+
+# New Files Added 4/9/2026
+images/
+Brim Interview Question Bank/
+Brim-v2 Upgradation Roadmap/

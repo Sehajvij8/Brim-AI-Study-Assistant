@@ -1,0 +1,261 @@
+{
+  "evaluation": "Brim Generation Evaluation V1",
+  "generator_model": "openai/gpt-oss-120b",
+  "judge_model": "openai/gpt-oss-20b",
+  "summary": {
+    "total_questions": 24,
+    "answerable_questions": 22,
+    "unanswerable_questions": 2,
+    "correctness_average": 5,
+    "correctness_percentage": 100.0,
+    "faithfulness_average": 4.92,
+    "faithfulness_percentage": 98.4,
+    "relevance_average": 5,
+    "relevance_percentage": 100.0,
+    "abstention_pass": 2,
+    "abstention_total": 2,
+    "abstention_accuracy_percentage": 100.0
+  },
+  "results": [
+    {
+      "id": "Q01",
+      "question": "What is machine learning?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer accurately defines machine learning in line with the reference answer, uses information directly supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q02",
+      "question": "What is the difference between classification and regression?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly states that classification predicts discrete categories and regression predicts continuous values, matching the reference answer. It cites logistic and linear regression, which are supported by the retrieved context. The response directly addresses the question without irrelevant content."
+    },
+    {
+      "id": "Q03",
+      "question": "What is the purpose of the validation set?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly states the purpose of the validation set as supporting model selection and hyperparameter tuning, matching the reference answer. The claim is directly supported by the retrieved context, and the response directly addresses the question without irrelevant information."
+    },
+    {
+      "id": "Q04",
+      "question": "Why should the test set be held back until the end?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately reflects the reference answer, is fully supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q05",
+      "question": "Give two examples of feature engineering.",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly lists two feature engineering examples that match the reference answer and are supported by the retrieved context."
+    },
+    {
+      "id": "Q06",
+      "question": "What type of target does linear regression model?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer correctly states that linear regression models a continuous target as a weighted combination of input features, matching the reference answer and supported by the retrieved context. It directly addresses the question."
+    },
+    {
+      "id": "Q07",
+      "question": "How does changing the classification threshold affect logistic regression?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately reflects the reference answer, is fully supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q08",
+      "question": "What controls can reduce decision-tree complexity?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer lists exactly the controls mentioned in the reference answer and is fully supported by the retrieved context."
+    },
+    {
+      "id": "Q09",
+      "question": "How does boosting differ from bagging?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 4,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately explains the key difference between bagging and boosting and directly addresses the question. It is fully supported by the retrieved context for the main points, but includes an additional claim about bias reduction that is not present in the context, slightly lowering faithfulness."
+    },
+    {
+      "id": "Q10",
+      "question": "What does recall measure in binary classification?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer accurately states that recall measures the fraction of actual positives correctly identified, matching the reference answer. It is fully supported by the retrieved context and directly addresses the question."
+    },
+    {
+      "id": "Q11",
+      "question": "Why can accuracy be misleading for an imbalanced classification problem?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly states that accuracy can be misleading in imbalanced settings because a model can achieve high accuracy by predicting the majority class, matching the reference answer. It is fully supported by the retrieved context, which explicitly mentions this point, and it directly addresses the question without irrelevant content."
+    },
+    {
+      "id": "Q12",
+      "question": "What is backpropagation used for in a neural network?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer accurately states that backpropagation calculates gradients for optimizer updates, matching the reference answer and supported by the retrieved context."
+    },
+    {
+      "id": "Q13",
+      "question": "Why are embeddings useful for semantic search?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately captures the key points of the reference answer and is fully supported by the retrieved context."
+    },
+    {
+      "id": "Q14",
+      "question": "What does a vector database store besides vectors?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly states that a vector database stores vectors with associated metadata or payloads, matching the reference answer. It is fully supported by the retrieved context and directly addresses the question."
+    },
+    {
+      "id": "Q15",
+      "question": "How does Retrieval-Augmented Generation work?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately describes RAG as transforming the query, retrieving relevant chunks, and generating an answer using that context, matching the reference answer. All claims are supported by the retrieved context, and the response directly addresses the question without irrelevant information."
+    },
+    {
+      "id": "Q16",
+      "question": "Why is chunk overlap useful in document retrieval?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 4,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer correctly states that chunk overlap preserves information across boundaries, matching the reference. It adds extra details about precision and chunk size that are not explicitly supported by the retrieved context, hence a slight deduction in faithfulness. The answer directly addresses the question."
+    },
+    {
+      "id": "Q17",
+      "question": "What does Recall@K measure in retrieval evaluation?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer accurately restates the reference answer, is fully supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q18",
+      "question": "What does Mean Reciprocal Rank reward?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer accurately restates the reference answer, is fully supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q19",
+      "question": "What should a RAG system do when the answer is absent from the provided documents?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer correctly states that a RAG system should explicitly say the information was not found and avoid inventing answers, matching the reference answer and supported by the retrieved context."
+    },
+    {
+      "id": "Q20",
+      "question": "Why can a strong RAG prompt not compensate for retrieving the wrong evidence?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The answer accurately reflects the reference answer, is fully supported by the retrieved context, and directly addresses the question."
+    },
+    {
+      "id": "Q21",
+      "question": "Which stages can contribute to RAG latency?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer lists exactly the stages mentioned in the reference answer and supported by the retrieved context, directly addressing the question."
+    },
+    {
+      "id": "Q22",
+      "question": "What must remain constant for a fair comparison of two retrieval configurations?",
+      "answerable": true,
+      "correctness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": null,
+      "reason": "The generated answer lists exactly the same items as the reference answer and is fully supported by the retrieved context."
+    },
+    {
+      "id": "Q23",
+      "question": "What is Brim's exact production accuracy on this document?",
+      "answerable": false,
+      "correctness": null,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": "PASS",
+      "reason": "The answer correctly acknowledges that the requested information is not present in the provided documents and does not provide any unsupported or invented details."
+    },
+    {
+      "id": "Q24",
+      "question": "Which company originally created the Brim AI Study Assistant?",
+      "answerable": false,
+      "correctness": null,
+      "faithfulness": 5,
+      "relevance": 5,
+      "abstention": "PASS",
+      "reason": "The answer correctly states that the information is not available in the provided documents and does not provide any unsupported claims."
+    }
+  ]
+}

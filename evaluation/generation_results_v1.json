@@ -1,0 +1,698 @@
+[
+  {
+    "id": "Q01",
+    "category": "factual",
+    "question": "What is machine learning?",
+    "answerable": true,
+    "reference_answer": "Machine learning is a field of artificial intelligence in which a model learns useful patterns from examples rather than relying entirely on manually written rules.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.6100972588659863,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Brim Evaluation Knowledge Base\nA synthetic but realistic study document designed specifically for evaluating document ingestion, chunking,\nsemantic retrieval, and grounded question answering.\n1. Foundations of Machine Learning\nMachine learning is a field of artificial intelligence in which a model learns useful patterns from examples rather\nthan relying entirely on manually written rules. A typical machine learning workflow contains data collection, data\ncleaning, feature preparation, model training, validation, evaluation, and deployment. The quality of the final\nsystem depends not only on the algorithm but also on the quality and representativeness of the data.\n2. Supervised and Unsupervised Learning\nSupervised learning uses examples for which a target value is known. Classification predicts a discrete category,\nwhile regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and"
+      },
+      {
+        "rank": 2,
+        "score": 0.4888375431382159,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 3,
+        "score": 0.452784159218239,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      }
+    ],
+    "generated_answer": "**Machine learning** is a branch of artificial intelligence where:\n\n- A model **learns useful patterns directly from data examples** instead of depending on hand‑crafted rules.\n- It discovers these patterns by training on examples and then can make predictions or decisions on new, unseen data.\n\nIn short, machine learning lets computers automatically improve their performance by learning from experience (the data)."
+  },
+  {
+    "id": "Q02",
+    "category": "factual",
+    "question": "What is the difference between classification and regression?",
+    "answerable": true,
+    "reference_answer": "Classification predicts a discrete category, while regression predicts a continuous quantity.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5017580610334645,
+        "source": "tmp9hvksey0.pdf",
+        "text": "include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and\ncreating ratios from related measurements. Feature engineering should be performed carefully because features\nderived from future information can introduce leakage into a predictive model.\n5. Linear Regression\nLinear regression models a continuous target as a weighted combination of input features. The coefficients\ndescribe how the predicted target changes with the corresponding feature when other included variables are held\nconstant. Mean squared error is frequently used during training because it penalizes large errors more strongly\nthan small errors.\n6. Logistic Regression\nLogistic regression is widely used for binary classification. Instead of directly predicting an unrestricted real-valued\noutput, it models a probability and converts that probability into a class using a decision threshold. Changing the"
+      },
+      {
+        "rank": 2,
+        "score": 0.38512701057688825,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 3,
+        "score": 0.380361169180958,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      }
+    ],
+    "generated_answer": "**Classification vs. Regression**\n\n- **Classification**\n  - Predicts a **discrete class label** (e.g., “spam” vs. “not spam”).\n  - Example from the documents: *Logistic regression* is used for binary classification; it models a probability and then assigns a class based on a decision threshold.\n\n- **Regression**\n  - Predicts a **continuous numeric value** (e.g., house price, temperature).\n  - Example from the documents: *Linear regression* models a continuous target as a weighted combination of input features.\n\nIn short, classification deals with categorical outcomes, while regression deals with numeric, continuous outcomes."
+  },
+  {
+    "id": "Q03",
+    "category": "factual",
+    "question": "What is the purpose of the validation set?",
+    "answerable": true,
+    "reference_answer": "The validation set supports model selection and hyperparameter tuning.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.410529874644451,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      },
+      {
+        "rank": 2,
+        "score": 0.3603022925319148,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Appendix: Evaluation Question Design\nThe document is intentionally structured so an evaluation set can contain direct factual questions, conceptual\nquestions, cross-section questions, and unanswerable questions. The same document can therefore be used for\nretrieval and grounded-generation testing.\nQuestion type\nExample\nFactual\nWhat does the validation set support during model development?\nConceptual\nWhy can accuracy be misleading for an imbalanced classification problem?\nMulti-section\nHow do embeddings and vector search work together in semantic retrieval?\nRAG-specific\nWhat is the purpose of supplying retrieved chunks to a language model?\nUnanswerable\nWhat is the exact accuracy of the Brim application on this document?"
+      },
+      {
+        "rank": 3,
+        "score": 0.2819944278454204,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      }
+    ],
+    "generated_answer": "The validation set is used to **support model selection and hyper‑parameter tuning**.  \n\n- It lets you compare different model architectures or settings.  \n- By evaluating performance on this separate data, you can choose the best‑performing model and fine‑tune its hyper‑parameters before the final test."
+  },
+  {
+    "id": "Q04",
+    "category": "conceptual",
+    "question": "Why should the test set be held back until the end?",
+    "answerable": true,
+    "reference_answer": "The test set is held back until the end to provide an estimate of performance on previously unseen examples; repeatedly tuning against it can cause test-set leakage and overly optimistic results.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.2656905846619132,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      },
+      {
+        "rank": 2,
+        "score": 0.2500560288574582,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Appendix: Evaluation Question Design\nThe document is intentionally structured so an evaluation set can contain direct factual questions, conceptual\nquestions, cross-section questions, and unanswerable questions. The same document can therefore be used for\nretrieval and grounded-generation testing.\nQuestion type\nExample\nFactual\nWhat does the validation set support during model development?\nConceptual\nWhy can accuracy be misleading for an imbalanced classification problem?\nMulti-section\nHow do embeddings and vector search work together in semantic retrieval?\nRAG-specific\nWhat is the purpose of supplying retrieved chunks to a language model?\nUnanswerable\nWhat is the exact accuracy of the Brim application on this document?"
+      },
+      {
+        "rank": 3,
+        "score": 0.2363812942171728,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      }
+    ],
+    "generated_answer": "- The test set is kept aside until the very end so it can give an **unbiased estimate of how the model will perform on truly unseen data**.  \n- If you tune or select models using the test set, you introduce **test‑set leakage** – the model indirectly “sees” the test data, which makes the reported performance **overly optimistic** and not reflective of real‑world results.  \n- Holding it back ensures that the final evaluation is a fair, realistic measure of the model’s generalization ability."
+  },
+  {
+    "id": "Q05",
+    "category": "factual",
+    "question": "Give two examples of feature engineering.",
+    "answerable": true,
+    "reference_answer": "Examples include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and creating ratios from related measurements.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.4882924914927991,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      },
+      {
+        "rank": 2,
+        "score": 0.3478335571082285,
+        "source": "tmp9hvksey0.pdf",
+        "text": "include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and\ncreating ratios from related measurements. Feature engineering should be performed carefully because features\nderived from future information can introduce leakage into a predictive model.\n5. Linear Regression\nLinear regression models a continuous target as a weighted combination of input features. The coefficients\ndescribe how the predicted target changes with the corresponding feature when other included variables are held\nconstant. Mean squared error is frequently used during training because it penalizes large errors more strongly\nthan small errors.\n6. Logistic Regression\nLogistic regression is widely used for binary classification. Instead of directly predicting an unrestricted real-valued\noutput, it models a probability and converts that probability into a class using a decision threshold. Changing the"
+      },
+      {
+        "rank": 3,
+        "score": 0.29246630495841686,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      }
+    ],
+    "generated_answer": "- Extracting the day of the week from a timestamp (e.g., turning “2023‑07‑15 08:30” into “Saturday”).  \n- Converting a categorical field into numerical indicators (e.g., one‑hot encoding a “color” column such as red, green, blue)."
+  },
+  {
+    "id": "Q06",
+    "category": "factual",
+    "question": "What type of target does linear regression model?",
+    "answerable": true,
+    "reference_answer": "Linear regression models a continuous target as a weighted combination of input features.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.42608148993961825,
+        "source": "tmp9hvksey0.pdf",
+        "text": "include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and\ncreating ratios from related measurements. Feature engineering should be performed carefully because features\nderived from future information can introduce leakage into a predictive model.\n5. Linear Regression\nLinear regression models a continuous target as a weighted combination of input features. The coefficients\ndescribe how the predicted target changes with the corresponding feature when other included variables are held\nconstant. Mean squared error is frequently used during training because it penalizes large errors more strongly\nthan small errors.\n6. Logistic Regression\nLogistic regression is widely used for binary classification. Instead of directly predicting an unrestricted real-valued\noutput, it models a probability and converts that probability into a class using a decision threshold. Changing the"
+      },
+      {
+        "rank": 2,
+        "score": 0.22646720559372557,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      },
+      {
+        "rank": 3,
+        "score": 0.21499023589958527,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      }
+    ],
+    "generated_answer": "- Linear regression models a **continuous target** (a numeric value) as a weighted combination of the input features."
+  },
+  {
+    "id": "Q07",
+    "category": "conceptual",
+    "question": "How does changing the classification threshold affect logistic regression?",
+    "answerable": true,
+    "reference_answer": "Changing the threshold changes the trade-off between false positives and false negatives, even when the trained model remains unchanged.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.49954908475070575,
+        "source": "tmp9hvksey0.pdf",
+        "text": "include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and\ncreating ratios from related measurements. Feature engineering should be performed carefully because features\nderived from future information can introduce leakage into a predictive model.\n5. Linear Regression\nLinear regression models a continuous target as a weighted combination of input features. The coefficients\ndescribe how the predicted target changes with the corresponding feature when other included variables are held\nconstant. Mean squared error is frequently used during training because it penalizes large errors more strongly\nthan small errors.\n6. Logistic Regression\nLogistic regression is widely used for binary classification. Instead of directly predicting an unrestricted real-valued\noutput, it models a probability and converts that probability into a class using a decision threshold. Changing the"
+      },
+      {
+        "rank": 2,
+        "score": 0.43098840534339355,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 3,
+        "score": 0.33750822673473535,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      }
+    ],
+    "generated_answer": "Changing the classification threshold in logistic regression does **not** alter the trained model itself; it only changes how the predicted probabilities are turned into class labels.  \n\n- **Higher threshold** (e.g., 0.7 instead of 0.5)  \n  - Fewer instances are labeled as the positive class.  \n  - **False positives** decrease, but **false negatives** increase.  \n  - Precision tends to go up, recall tends to go down.  \n\n- **Lower threshold** (e.g., 0.3)  \n  - More instances are labeled as positive.  \n  - **False positives** increase, while **false negatives** decrease.  \n  - Recall improves, but precision may drop.  \n\nSo, adjusting the threshold lets you trade off between catching more true positives (higher recall) and avoiding incorrect positive predictions (higher precision), even though the underlying logistic‑regression model remains unchanged."
+  },
+  {
+    "id": "Q08",
+    "category": "factual",
+    "question": "What controls can reduce decision-tree complexity?",
+    "answerable": true,
+    "reference_answer": "Maximum depth, minimum samples per leaf, and pruning are common controls for tree complexity.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5318975541940067,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 2,
+        "score": 0.38912878279612206,
+        "source": "tmp9hvksey0.pdf",
+        "text": "complex relationships but may overfit. Maximum depth, minimum samples per leaf, and pruning are common\ncontrols for tree complexity.\n8. Ensemble Learning\nEnsemble learning combines multiple predictive models to obtain a stronger overall system. Bagging reduces\nvariance by training models on different samples and aggregating their predictions. Random forests use\nrandomized decision trees and aggregation. Boosting builds models sequentially so that later models focus more\nstrongly on errors made by earlier models.\n9. Model Evaluation Metrics\nFor binary classification, accuracy measures the proportion of all predictions that are correct. Precision measures\nthe fraction of predicted positives that are actually positive, while recall measures the fraction of actual positives\nthat are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance"
+      },
+      {
+        "rank": 3,
+        "score": 0.15228789458514422,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      }
+    ],
+    "generated_answer": "**Controls that can reduce decision‑tree complexity:**\n\n- **Maximum depth** – limits how deep the tree can grow.  \n- **Minimum samples per leaf** – requires each leaf node to contain a minimum number of training examples.  \n- **Pruning** – removes branches that contribute little to predictive performance, simplifying the tree."
+  },
+  {
+    "id": "Q09",
+    "category": "conceptual",
+    "question": "How does boosting differ from bagging?",
+    "answerable": true,
+    "reference_answer": "Bagging trains models on different samples and aggregates predictions, while boosting builds models sequentially so later models focus more strongly on errors made by earlier models.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.49641109036801456,
+        "source": "tmp9hvksey0.pdf",
+        "text": "complex relationships but may overfit. Maximum depth, minimum samples per leaf, and pruning are common\ncontrols for tree complexity.\n8. Ensemble Learning\nEnsemble learning combines multiple predictive models to obtain a stronger overall system. Bagging reduces\nvariance by training models on different samples and aggregating their predictions. Random forests use\nrandomized decision trees and aggregation. Boosting builds models sequentially so that later models focus more\nstrongly on errors made by earlier models.\n9. Model Evaluation Metrics\nFor binary classification, accuracy measures the proportion of all predictions that are correct. Precision measures\nthe fraction of predicted positives that are actually positive, while recall measures the fraction of actual positives\nthat are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance"
+      },
+      {
+        "rank": 2,
+        "score": 0.29810264321834523,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 3,
+        "score": 0.28838989993570774,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      }
+    ],
+    "generated_answer": "**Boosting vs. Bagging**\n\n- **Bagging (Bootstrap Aggregating)**\n  - Trains many models **independently** on different bootstrap‑sampled subsets of the data.  \n  - The individual predictions are **aggregated** (e.g., majority vote for classification, averaging for regression).  \n  - Main goal: **reduce variance** of a high‑variance learner (like a deep decision tree).  \n\n- **Boosting**\n  - Builds models **sequentially**; each new model is trained to correct the **errors** made by the previous ones.  \n  - Predictions are combined by giving more weight to models that performed better on the difficult cases.  \n  - Main goal: **reduce bias** and improve overall accuracy by focusing on hard‑to‑predict instances.  \n\nIn short, bagging creates parallel, diverse learners and averages them, while boosting creates a chain of learners where each one learns from the mistakes of its predecessor."
+  },
+  {
+    "id": "Q10",
+    "category": "factual",
+    "question": "What does recall measure in binary classification?",
+    "answerable": true,
+    "reference_answer": "Recall measures the fraction of actual positives that are successfully identified.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.4376528837964949,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      },
+      {
+        "rank": 2,
+        "score": 0.4223247150770476,
+        "source": "tmp9hvksey0.pdf",
+        "text": "complex relationships but may overfit. Maximum depth, minimum samples per leaf, and pruning are common\ncontrols for tree complexity.\n8. Ensemble Learning\nEnsemble learning combines multiple predictive models to obtain a stronger overall system. Bagging reduces\nvariance by training models on different samples and aggregating their predictions. Random forests use\nrandomized decision trees and aggregation. Boosting builds models sequentially so that later models focus more\nstrongly on errors made by earlier models.\n9. Model Evaluation Metrics\nFor binary classification, accuracy measures the proportion of all predictions that are correct. Precision measures\nthe fraction of predicted positives that are actually positive, while recall measures the fraction of actual positives\nthat are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance"
+      },
+      {
+        "rank": 3,
+        "score": 0.3939128115791396,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      }
+    ],
+    "generated_answer": "- **Recall** (also called **sensitivity**) measures **the proportion of actual positive cases that the model correctly identifies**.  \n- In other words, it tells you how many of the true positives were captured by the classifier out of all the real positive instances."
+  },
+  {
+    "id": "Q11",
+    "category": "conceptual",
+    "question": "Why can accuracy be misleading for an imbalanced classification problem?",
+    "answerable": true,
+    "reference_answer": "Accuracy can be misleading because a model may achieve high accuracy by mostly predicting the majority class.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.46974876557107714,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      },
+      {
+        "rank": 2,
+        "score": 0.4265159275495023,
+        "source": "tmp9hvksey0.pdf",
+        "text": "complex relationships but may overfit. Maximum depth, minimum samples per leaf, and pruning are common\ncontrols for tree complexity.\n8. Ensemble Learning\nEnsemble learning combines multiple predictive models to obtain a stronger overall system. Bagging reduces\nvariance by training models on different samples and aggregating their predictions. Random forests use\nrandomized decision trees and aggregation. Boosting builds models sequentially so that later models focus more\nstrongly on errors made by earlier models.\n9. Model Evaluation Metrics\nFor binary classification, accuracy measures the proportion of all predictions that are correct. Precision measures\nthe fraction of predicted positives that are actually positive, while recall measures the fraction of actual positives\nthat are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance"
+      },
+      {
+        "rank": 3,
+        "score": 0.3267184749201465,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      }
+    ],
+    "generated_answer": "**Accuracy can be misleading when the classes are imbalanced because:**\n\n- **Majority‑class dominance:** If one class appears far more often than the other, a model that simply predicts the majority class for every case will still get a high accuracy (e.g., 95 % correct when the majority class is 95 % of the data).  \n- **Minority‑class performance hidden:** This high overall accuracy hides the fact that the model may be failing completely on the minority class, which is often the class of real interest.  \n- **Better alternatives:** Metrics that focus on the minority class—such as precision, recall, F1‑score, or ROC‑AUC—provide a more truthful picture of how well the model is performing.\n\nSo, in imbalanced problems, relying on accuracy alone can give a false sense of good performance."
+  },
+  {
+    "id": "Q12",
+    "category": "factual",
+    "question": "What is backpropagation used for in a neural network?",
+    "answerable": true,
+    "reference_answer": "Backpropagation is used to calculate gradients during training so an optimizer can update model parameters.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.3905422581844409,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      },
+      {
+        "rank": 2,
+        "score": 0.3093948129322178,
+        "source": "tmp9hvksey0.pdf",
+        "text": "output, it models a probability and converts that probability into a class using a decision threshold. Changing the\nthreshold changes the trade-off between false positives and false negatives, even when the underlying trained\nmodel remains unchanged.\n7. Decision Trees\nA decision tree repeatedly partitions observations according to feature-based rules. Internal nodes represent\ndecisions, branches represent outcomes of those decisions, and leaf nodes provide predictions. Deep trees can fit"
+      },
+      {
+        "rank": 3,
+        "score": 0.2974319171184041,
+        "source": "tmp9hvksey0.pdf",
+        "text": "parameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings\nAn embedding represents an item such as a word, sentence, paragraph, image, or document as a numerical\nvector. Semantic embedding models are trained so that related meanings tend to occupy nearby regions of vector\nspace. Embeddings are useful for semantic search because similarity can be computed without requiring the query\nand document to use exactly the same words.\n13. Vector Search\nA vector database stores vectors together with associated metadata or payloads. During semantic retrieval, a\nquery is converted into a vector and compared with stored vectors. The database returns the nearest candidates\naccording to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation"
+      }
+    ],
+    "generated_answer": "**Backpropagation in a neural network is used to:**\n\n- Compute the gradients of the loss function with respect to each model parameter (weights and biases).  \n- Provide these gradients to an optimizer, which then updates the parameters to reduce the loss.  \n\nIn short, backpropagation tells the network how to adjust its parameters during training so that its predictions become more accurate."
+  },
+  {
+    "id": "Q13",
+    "category": "conceptual",
+    "question": "Why are embeddings useful for semantic search?",
+    "answerable": true,
+    "reference_answer": "Embeddings represent text as numerical vectors, and semantic embedding models place related meanings near each other, allowing similarity-based search without requiring exact word matches.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.7172113552013539,
+        "source": "tmp9hvksey0.pdf",
+        "text": "parameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings\nAn embedding represents an item such as a word, sentence, paragraph, image, or document as a numerical\nvector. Semantic embedding models are trained so that related meanings tend to occupy nearby regions of vector\nspace. Embeddings are useful for semantic search because similarity can be computed without requiring the query\nand document to use exactly the same words.\n13. Vector Search\nA vector database stores vectors together with associated metadata or payloads. During semantic retrieval, a\nquery is converted into a vector and compared with stored vectors. The database returns the nearest candidates\naccording to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation"
+      },
+      {
+        "rank": 2,
+        "score": 0.4474424966156094,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      },
+      {
+        "rank": 3,
+        "score": 0.4005939594578767,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      }
+    ],
+    "generated_answer": "**Embeddings help semantic search because:**\n\n- **Vector representation:** Each word, sentence, paragraph, image, or document is turned into a numerical vector.  \n- **Meaning‑based proximity:** Semantic embedding models are trained so that items with related meanings end up **near each other in vector space**.  \n- **Similarity without exact word match:** During search, the query is also embedded, and the system can compute similarity (e.g., cosine similarity) between vectors. This lets the search find relevant results **even when the query and the documents don’t use the same exact words**.  \n\nThus, embeddings enable a more flexible, meaning‑focused retrieval rather than a strict keyword match."
+  },
+  {
+    "id": "Q14",
+    "category": "factual",
+    "question": "What does a vector database store besides vectors?",
+    "answerable": true,
+    "reference_answer": "A vector database stores vectors together with associated metadata or payloads.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5875970102227175,
+        "source": "tmp9hvksey0.pdf",
+        "text": "parameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings\nAn embedding represents an item such as a word, sentence, paragraph, image, or document as a numerical\nvector. Semantic embedding models are trained so that related meanings tend to occupy nearby regions of vector\nspace. Embeddings are useful for semantic search because similarity can be computed without requiring the query\nand document to use exactly the same words.\n13. Vector Search\nA vector database stores vectors together with associated metadata or payloads. During semantic retrieval, a\nquery is converted into a vector and compared with stored vectors. The database returns the nearest candidates\naccording to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation"
+      },
+      {
+        "rank": 2,
+        "score": 0.30523052597665373,
+        "source": "tmp9hvksey0.pdf",
+        "text": "while regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and\nattempts to discover structure in the data. Clustering is a common unsupervised technique in which similar\nobservations are grouped together.\n3. Train, Validation, and Test Sets\nA dataset is commonly divided into training, validation, and test portions. The training set is used to fit model\nparameters. The validation set supports model selection and hyperparameter tuning. The test set is held back until\nthe end and provides an estimate of performance on previously unseen examples. Repeatedly tuning a model\nagainst the test set can cause test-set leakage and make the reported result overly optimistic.\n4. Feature Engineering\nFeature engineering transforms raw observations into representations that are useful for a model. Examples\ninclude extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and"
+      },
+      {
+        "rank": 3,
+        "score": 0.302317699608341,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      }
+    ],
+    "generated_answer": "A vector database stores **vectors along with their associated metadata (or payloads)**. This extra information can be used for filtering and providing context during retrieval."
+  },
+  {
+    "id": "Q15",
+    "category": "conceptual",
+    "question": "How does Retrieval-Augmented Generation work?",
+    "answerable": true,
+    "reference_answer": "RAG transforms a user query for retrieval, selects relevant document chunks, supplies them as context to a language model, and generates an answer using that context.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5922689640821688,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      },
+      {
+        "rank": 2,
+        "score": 0.4812306476922914,
+        "source": "tmp9hvksey0.pdf",
+        "text": "parameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings\nAn embedding represents an item such as a word, sentence, paragraph, image, or document as a numerical\nvector. Semantic embedding models are trained so that related meanings tend to occupy nearby regions of vector\nspace. Embeddings are useful for semantic search because similarity can be computed without requiring the query\nand document to use exactly the same words.\n13. Vector Search\nA vector database stores vectors together with associated metadata or payloads. During semantic retrieval, a\nquery is converted into a vector and compared with stored vectors. The database returns the nearest candidates\naccording to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation"
+      },
+      {
+        "rank": 3,
+        "score": 0.4407504955254929,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      }
+    ],
+    "generated_answer": "**Retrieval‑Augmented Generation (RAG) works by combining two steps:**\n\n- **Retrieval:**  \n  - The user’s query is first turned into a representation (e.g., an embedding) that can be used for searching.  \n  - A vector/database search finds the most relevant document chunks (or pieces of evidence) based on similarity or distance functions, possibly filtered by metadata.\n\n- **Generation:**  \n  - The retrieved chunks are fed to a generative language model as additional context.  \n  - The model then produces its answer **using this retrieved context**, rather than relying solely on the knowledge stored in its own parameters.\n\nIn short, RAG first fetches pertinent information and then lets the language model generate a response that is grounded in that fetched evidence."
+  },
+  {
+    "id": "Q16",
+    "category": "conceptual",
+    "question": "Why is chunk overlap useful in document retrieval?",
+    "answerable": true,
+    "reference_answer": "Overlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5843585250595602,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      },
+      {
+        "rank": 2,
+        "score": 0.5335467306419727,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      },
+      {
+        "rank": 3,
+        "score": 0.4148894377448702,
+        "source": "tmp9hvksey0.pdf",
+        "text": "parameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings\nAn embedding represents an item such as a word, sentence, paragraph, image, or document as a numerical\nvector. Semantic embedding models are trained so that related meanings tend to occupy nearby regions of vector\nspace. Embeddings are useful for semantic search because similarity can be computed without requiring the query\nand document to use exactly the same words.\n13. Vector Search\nA vector database stores vectors together with associated metadata or payloads. During semantic retrieval, a\nquery is converted into a vector and compared with stored vectors. The database returns the nearest candidates\naccording to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation"
+      }
+    ],
+    "generated_answer": "**Chunk overlap helps keep important context together when you split a document for retrieval:**\n\n- **Preserves information across boundaries:**  \n  When a document is divided into chunks, some sentences or ideas may be cut in half. Overlapping neighboring chunks ensures that the part that falls at the edge of one chunk is also included in the next chunk, so no crucial detail is lost.\n\n- **Improves retrieval precision:**  \n  By retaining the full context of concepts that span chunk borders, the system can match queries more accurately, leading to better recall and relevance.\n\n- **Balances chunk size:**  \n  Overlap lets you keep chunks relatively small (which helps precision) while still capturing enough surrounding context that very small, non‑overlapping chunks might miss.\n\nIn short, overlapping chunks prevents loss of context that would otherwise occur at chunk boundaries, making semantic search and retrieval more reliable."
+  },
+  {
+    "id": "Q17",
+    "category": "factual",
+    "question": "What does Recall@K measure in retrieval evaluation?",
+    "answerable": true,
+    "reference_answer": "Recall at K asks whether relevant information appears among the top K retrieved results.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5699012473571989,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      },
+      {
+        "rank": 2,
+        "score": 0.48399283006500393,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      },
+      {
+        "rank": 3,
+        "score": 0.4795963862528202,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      }
+    ],
+    "generated_answer": "**Recall@K** measures whether at least one relevant piece of information is found within the top K results returned by the retrieval system. In other words, it checks if the correct (relevant) documents or chunks appear among the first K items retrieved."
+  },
+  {
+    "id": "Q18",
+    "category": "factual",
+    "question": "What does Mean Reciprocal Rank reward?",
+    "answerable": true,
+    "reference_answer": "Mean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.3348187269666169,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      },
+      {
+        "rank": 2,
+        "score": 0.28785388856297267,
+        "source": "tmp9hvksey0.pdf",
+        "text": "that are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance\nClass imbalance occurs when one class is much more common than another. Accuracy can be misleading in this\nsetting because a model may achieve high accuracy by mostly predicting the majority class. Resampling,\nclass-weighted objectives, threshold adjustment, and appropriate metrics such as precision, recall, and F1 can\nprovide a more informative evaluation.\n11. Neural Networks\nA neural network contains layers of parameterized transformations. During training, the model computes\npredictions, evaluates a loss, and uses backpropagation to calculate gradients. An optimizer then updates the\nparameters. Nonlinear activation functions allow stacked layers to represent more complex functions than a purely\nlinear sequence of operations.\n12. Embeddings"
+      },
+      {
+        "rank": 3,
+        "score": 0.24798114435105087,
+        "source": "tmp9hvksey0.pdf",
+        "text": "complex relationships but may overfit. Maximum depth, minimum samples per leaf, and pruning are common\ncontrols for tree complexity.\n8. Ensemble Learning\nEnsemble learning combines multiple predictive models to obtain a stronger overall system. Bagging reduces\nvariance by training models on different samples and aggregating their predictions. Random forests use\nrandomized decision trees and aggregation. Boosting builds models sequentially so that later models focus more\nstrongly on errors made by earlier models.\n9. Model Evaluation Metrics\nFor binary classification, accuracy measures the proportion of all predictions that are correct. Precision measures\nthe fraction of predicted positives that are actually positive, while recall measures the fraction of actual positives\nthat are successfully identified. The F1 score is the harmonic mean of precision and recall. ROC-AUC summarizes\nranking performance across classification thresholds.\n10. Class Imbalance"
+      }
+    ],
+    "generated_answer": "- **Mean Reciprocal Rank (MRR)** rewards you when the **first relevant result shows up near the top of the retrieved list**.  \n- The closer the first relevant document is to the top (i.e., the higher its rank), the higher the MRR score you get."
+  },
+  {
+    "id": "Q19",
+    "category": "conceptual",
+    "question": "What should a RAG system do when the answer is absent from the provided documents?",
+    "answerable": true,
+    "reference_answer": "It should avoid inventing an answer and can explicitly state that the information was not found in the provided documents.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5792039335576895,
+        "source": "tmp9hvksey0.pdf",
+        "text": "metrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering\nA grounded answer is supported by information contained in the retrieved context. A RAG application should avoid\npresenting unsupported claims as facts. For questions whose answers are absent from the provided documents,\nan appropriate system can explicitly state that the information was not found instead of inventing an answer.\nGroundedness should be evaluated using questions with both answerable and unanswerable cases.\n18. Prompt Design for RAG\nA RAG prompt can define the model's role, provide retrieved context, state the user question, and specify answer\nconstraints. Clear instructions can require the model to use only supplied context and to acknowledge missing\ninformation. Prompt quality should not be evaluated independently of retrieval quality because a strong prompt\ncannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations"
+      },
+      {
+        "rank": 2,
+        "score": 0.36263654487323305,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      },
+      {
+        "rank": 3,
+        "score": 0.3464034168910524,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      }
+    ],
+    "generated_answer": "- When the answer cannot be found in the retrieved documents, a RAG system should **explicitly state that the information was not found**.  \n- It must avoid inventing or presenting unsupported claims as facts, and instead acknowledge the missing information."
+  },
+  {
+    "id": "Q20",
+    "category": "conceptual",
+    "question": "Why can a strong RAG prompt not compensate for retrieving the wrong evidence?",
+    "answerable": true,
+    "reference_answer": "Prompt quality does not replace retrieval quality; if the wrong evidence is retrieved, the model is still given incorrect or irrelevant context.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.47575427578971397,
+        "source": "tmp9hvksey0.pdf",
+        "text": "metrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering\nA grounded answer is supported by information contained in the retrieved context. A RAG application should avoid\npresenting unsupported claims as facts. For questions whose answers are absent from the provided documents,\nan appropriate system can explicitly state that the information was not found instead of inventing an answer.\nGroundedness should be evaluated using questions with both answerable and unanswerable cases.\n18. Prompt Design for RAG\nA RAG prompt can define the model's role, provide retrieved context, state the user question, and specify answer\nconstraints. Clear instructions can require the model to use only supplied context and to acknowledge missing\ninformation. Prompt quality should not be evaluated independently of retrieval quality because a strong prompt\ncannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations"
+      },
+      {
+        "rank": 2,
+        "score": 0.34512308363130706,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      },
+      {
+        "rank": 3,
+        "score": 0.2860593896647865,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Appendix: Evaluation Question Design\nThe document is intentionally structured so an evaluation set can contain direct factual questions, conceptual\nquestions, cross-section questions, and unanswerable questions. The same document can therefore be used for\nretrieval and grounded-generation testing.\nQuestion type\nExample\nFactual\nWhat does the validation set support during model development?\nConceptual\nWhy can accuracy be misleading for an imbalanced classification problem?\nMulti-section\nHow do embeddings and vector search work together in semantic retrieval?\nRAG-specific\nWhat is the purpose of supplying retrieved chunks to a language model?\nUnanswerable\nWhat is the exact accuracy of the Brim application on this document?"
+      }
+    ],
+    "generated_answer": "A strong RAG prompt can give clear instructions to the model, but it **still depends on the evidence that has been retrieved**.  \nIf the retrieved chunks are wrong or irrelevant, the model’s answer will be built on that faulty information, and no amount of prompting can turn incorrect evidence into a correct answer.  \n\n- The prompt tells the model *how* to use the context, not *what* the context contains.  \n- When the evidence itself is wrong, the model can only generate a response that reflects that wrong evidence.  \n- Therefore, prompt quality alone cannot fix errors that come from the retrieval stage.  \n\nSo, a strong prompt cannot compensate for retrieving the wrong evidence because the answer’s correctness is limited by the quality of the retrieved information."
+  },
+  {
+    "id": "Q21",
+    "category": "factual",
+    "question": "Which stages can contribute to RAG latency?",
+    "answerable": true,
+    "reference_answer": "Document processing, embedding creation, vector search, prompt construction, and language-model inference can all contribute to latency.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.38553017527113975,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      },
+      {
+        "rank": 2,
+        "score": 0.3216422626748322,
+        "source": "tmp9hvksey0.pdf",
+        "text": "metrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering\nA grounded answer is supported by information contained in the retrieved context. A RAG application should avoid\npresenting unsupported claims as facts. For questions whose answers are absent from the provided documents,\nan appropriate system can explicitly state that the information was not found instead of inventing an answer.\nGroundedness should be evaluated using questions with both answerable and unanswerable cases.\n18. Prompt Design for RAG\nA RAG prompt can define the model's role, provide retrieved context, state the user question, and specify answer\nconstraints. Clear instructions can require the model to use only supplied context and to acknowledge missing\ninformation. Prompt quality should not be evaluated independently of retrieval quality because a strong prompt\ncannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations"
+      },
+      {
+        "rank": 3,
+        "score": 0.15704177842004013,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      }
+    ],
+    "generated_answer": "The latency of a Retrieval‑Augmented Generation (RAG) request can come from several processing steps:\n\n- **Document processing** – preparing the source texts for retrieval.  \n- **Embedding creation** – converting documents (or chunks) into vector representations.  \n- **Vector search** – retrieving the most relevant embeddings from the vector store.  \n- **Prompt construction** – assembling the retrieved context, user question, and any system instructions into a prompt.  \n- **Language‑model inference** – generating the final answer from the model."
+  },
+  {
+    "id": "Q22",
+    "category": "conceptual",
+    "question": "What must remain constant for a fair comparison of two retrieval configurations?",
+    "answerable": true,
+    "reference_answer": "The questions, ground-truth relevance labels, embedding model, and evaluation procedure should remain constant while only the retrieval configuration changes.",
+    "expected_behavior": null,
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.5478304291802659,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      },
+      {
+        "rank": 2,
+        "score": 0.4973587581079605,
+        "source": "tmp9hvksey0.pdf",
+        "text": "according to a similarity or distance function. Metadata filtering can further restrict which stored records are eligible\nfor retrieval.\n14. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, or RAG, combines information retrieval with a generative language model. A\nuser query is first transformed into a representation suitable for retrieval. Relevant document chunks are then\nselected and supplied as context to the language model. The model generates an answer using that context rather\nthan relying only on information stored in its parameters.\n15. Chunking Strategy"
+      },
+      {
+        "rank": 3,
+        "score": 0.4940819435523506,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      }
+    ],
+    "generated_answer": "A fair comparison of two retrieval configurations should keep **all other factors unchanged**, namely:\n\n- The set of questions (evaluation queries)  \n- The ground‑truth relevance labels  \n- The embedding model used for creating vector representations  \n- The evaluation procedure (metrics, protocols, etc.)\n\nOnly the retrieval configuration itself should be varied."
+  },
+  {
+    "id": "Q23",
+    "category": "unanswerable",
+    "question": "What is Brim's exact production accuracy on this document?",
+    "answerable": false,
+    "reference_answer": null,
+    "expected_behavior": "The assistant should clearly state that the information is not available in the provided documents and should not invent or assume an answer.",
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.37250632227448677,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Appendix: Evaluation Question Design\nThe document is intentionally structured so an evaluation set can contain direct factual questions, conceptual\nquestions, cross-section questions, and unanswerable questions. The same document can therefore be used for\nretrieval and grounded-generation testing.\nQuestion type\nExample\nFactual\nWhat does the validation set support during model development?\nConceptual\nWhy can accuracy be misleading for an imbalanced classification problem?\nMulti-section\nHow do embeddings and vector search work together in semantic retrieval?\nRAG-specific\nWhat is the purpose of supplying retrieved chunks to a language model?\nUnanswerable\nWhat is the exact accuracy of the Brim application on this document?"
+      },
+      {
+        "rank": 2,
+        "score": 0.31660151468945946,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      },
+      {
+        "rank": 3,
+        "score": 0.30843879636583993,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Long documents are usually split into smaller chunks before embedding. Very large chunks can contain multiple\nunrelated ideas and may reduce retrieval precision. Extremely small chunks can lose necessary context.\nOverlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.\nChunk size and overlap should therefore be treated as retrieval parameters that can be evaluated rather than\nassumed to be optimal.\n16. RAG Retrieval Quality\nRetrieval quality can be evaluated separately from answer quality. Recall at K asks whether relevant information\nappears among the top K retrieved results. Precision at K measures how much of the retrieved set is relevant.\nMean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking. These\nmetrics help identify whether poor answers originate in retrieval or in generation.\n17. Grounded Answering"
+      }
+    ],
+    "generated_answer": "I couldn't find this information in the uploaded documents or previous conversation."
+  },
+  {
+    "id": "Q24",
+    "category": "unanswerable",
+    "question": "Which company originally created the Brim AI Study Assistant?",
+    "answerable": false,
+    "reference_answer": null,
+    "expected_behavior": "The assistant should clearly state that the information is not available in the provided documents and should not invent or assume an answer.",
+    "retrieved_context": [
+      {
+        "rank": 1,
+        "score": 0.24599564447117955,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Brim Evaluation Knowledge Base\nA synthetic but realistic study document designed specifically for evaluating document ingestion, chunking,\nsemantic retrieval, and grounded question answering.\n1. Foundations of Machine Learning\nMachine learning is a field of artificial intelligence in which a model learns useful patterns from examples rather\nthan relying entirely on manually written rules. A typical machine learning workflow contains data collection, data\ncleaning, feature preparation, model training, validation, evaluation, and deployment. The quality of the final\nsystem depends not only on the algorithm but also on the quality and representativeness of the data.\n2. Supervised and Unsupervised Learning\nSupervised learning uses examples for which a target value is known. Classification predicts a discrete category,\nwhile regression predicts a continuous quantity. In contrast, unsupervised learning works without target labels and"
+      },
+      {
+        "rank": 2,
+        "score": 0.19638843059329608,
+        "source": "tmp9hvksey0.pdf",
+        "text": "Appendix: Evaluation Question Design\nThe document is intentionally structured so an evaluation set can contain direct factual questions, conceptual\nquestions, cross-section questions, and unanswerable questions. The same document can therefore be used for\nretrieval and grounded-generation testing.\nQuestion type\nExample\nFactual\nWhat does the validation set support during model development?\nConceptual\nWhy can accuracy be misleading for an imbalanced classification problem?\nMulti-section\nHow do embeddings and vector search work together in semantic retrieval?\nRAG-specific\nWhat is the purpose of supplying retrieved chunks to a language model?\nUnanswerable\nWhat is the exact accuracy of the Brim application on this document?"
+      },
+      {
+        "rank": 3,
+        "score": 0.11606456140182311,
+        "source": "tmp9hvksey0.pdf",
+        "text": "cannot compensate for retrieving the wrong evidence.\n19. Latency and Production Considerations\nA RAG request may spend time in several stages: document processing, embedding creation, vector search,\nprompt construction, and language-model inference. Measuring end-to-end latency alone can hide the slowest\ncomponent. Component-level timing helps identify bottlenecks. Production evaluation should consider latency\ntogether with retrieval quality, answer quality, reliability, and resource usage.\n20. Experimental Comparison\nSuppose two retrieval configurations are tested on the same fixed evaluation set. A fair comparison keeps the\nquestions, ground-truth relevance labels, embedding model, and evaluation procedure constant while changing\nonly the retrieval configuration being studied. Results should be reported with the number of evaluation questions\nand the metrics used. A configuration should be selected based on measured evidence rather than on a single\nsuccessful example."
+      }
+    ],
+    "generated_answer": "I couldn't find this information in the uploaded documents or previous conversation."
+  }
+]

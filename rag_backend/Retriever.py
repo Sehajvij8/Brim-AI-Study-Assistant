@@ -23,7 +23,7 @@ def retrieve_chunks(query):
                 {
                     "text" : point.payload["text"],
                     "source" : point.payload.get("source" , "unknown"),
-                    "score" : point.score,\
+                    "score" : point.score,
                 }
             )
 

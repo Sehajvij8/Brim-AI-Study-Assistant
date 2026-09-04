@@ -1,0 +1,305 @@
+[
+  {
+    "id": "Q01",
+    "category": "factual",
+    "question": "What is machine learning?",
+    "gold_section": "1. Foundations of Machine Learning",
+    "ground_truth": "Machine learning is a field of artificial intelligence in which a model learns useful patterns from examples rather than relying entirely on manually written rules.",
+    "answerable": true,
+    "gold_evidence": [
+      "model learns useful patterns from examples",
+      "manually written rules"
+    ]
+  },
+  {
+    "id": "Q02",
+    "category": "factual",
+    "question": "What is the difference between classification and regression?",
+    "gold_section": "2. Supervised and Unsupervised Learning",
+    "ground_truth": "Classification predicts a discrete category, while regression predicts a continuous quantity.",
+    "answerable": true,
+    "gold_evidence": [
+      "classification predicts a discrete category",
+      "regression predicts a continuous quantity"
+    ]
+  },
+  {
+    "id": "Q03",
+    "category": "factual",
+    "question": "What is the purpose of the validation set?",
+    "gold_section": "3. Train, Validation, and Test Sets",
+    "ground_truth": "The validation set supports model selection and hyperparameter tuning.",
+    "answerable": true,
+    "gold_evidence": [
+      "validation set supports model selection",
+      "hyperparameter tuning"
+    ]
+  },
+  {
+    "id": "Q04",
+    "category": "conceptual",
+    "question": "Why should the test set be held back until the end?",
+    "gold_section": "3. Train, Validation, and Test Sets",
+    "ground_truth": "The test set is held back until the end to provide an estimate of performance on previously unseen examples; repeatedly tuning against it can cause test-set leakage and overly optimistic results.",
+    "answerable": true,
+    "gold_evidence": [
+      "test set is held back until the end",
+      "previously unseen examples",
+      "test-set leakage"
+    ]
+  },
+  {
+    "id": "Q05",
+    "category": "factual",
+    "question": "Give two examples of feature engineering.",
+    "gold_section": "4. Feature Engineering",
+    "ground_truth": "Examples include extracting the day of week from a timestamp, converting a categorical field into numerical indicators, and creating ratios from related measurements.",
+    "answerable": true,
+    "gold_evidence": [
+      "extracting the day of week from a timestamp",
+      "categorical field into numerical indicators",
+      "creating ratios"
+    ]
+  },
+  {
+    "id": "Q06",
+    "category": "factual",
+    "question": "What type of target does linear regression model?",
+    "gold_section": "5. Linear Regression",
+    "ground_truth": "Linear regression models a continuous target as a weighted combination of input features.",
+    "answerable": true,
+    "gold_evidence": [
+      "linear regression models a continuous target",
+      "weighted combination of input features"
+    ]
+  },
+  {
+    "id": "Q07",
+    "category": "conceptual",
+    "question": "How does changing the classification threshold affect logistic regression?",
+    "gold_section": "6. Logistic Regression",
+    "ground_truth": "Changing the threshold changes the trade-off between false positives and false negatives, even when the trained model remains unchanged.",
+    "answerable": true,
+    "gold_evidence": [
+      "probability",
+      "decision threshold",
+      "false positives and false negatives"
+    ]
+  },
+  {
+    "id": "Q08",
+    "category": "factual",
+    "question": "What controls can reduce decision-tree complexity?",
+    "gold_section": "7. Decision Trees",
+    "ground_truth": "Maximum depth, minimum samples per leaf, and pruning are common controls for tree complexity.",
+    "answerable": true,
+    "gold_evidence": [
+      "maximum depth",
+      "minimum samples per leaf",
+      "pruning"
+    ]
+  },
+  {
+    "id": "Q09",
+    "category": "conceptual",
+    "question": "How does boosting differ from bagging?",
+    "gold_section": "8. Ensemble Learning",
+    "ground_truth": "Bagging trains models on different samples and aggregates predictions, while boosting builds models sequentially so later models focus more strongly on errors made by earlier models.",
+    "answerable": true,
+    "gold_evidence": [
+      "bagging",
+      "different samples",
+      "boosting builds models sequentially",
+      "errors made by earlier models"
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "factual",
+    "question": "What does recall measure in binary classification?",
+    "gold_section": "9. Model Evaluation Metrics",
+    "ground_truth": "Recall measures the fraction of actual positives that are successfully identified.",
+    "answerable": true,
+    "gold_evidence": [
+      "recall measures",
+      "actual positives",
+      "successfully identified"
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "conceptual",
+    "question": "Why can accuracy be misleading for an imbalanced classification problem?",
+    "gold_section": "10. Class Imbalance",
+    "ground_truth": "Accuracy can be misleading because a model may achieve high accuracy by mostly predicting the majority class.",
+    "answerable": true,
+    "gold_evidence": [
+      "accuracy can be misleading",
+      "majority class",
+      "imbalanced classification"
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "factual",
+    "question": "What is backpropagation used for in a neural network?",
+    "gold_section": "11. Neural Networks",
+    "ground_truth": "Backpropagation is used to calculate gradients during training so an optimizer can update model parameters.",
+    "answerable": true,
+    "gold_evidence": [
+      "backpropagation",
+      "calculate gradients",
+      "optimizer can update model parameters"
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "conceptual",
+    "question": "Why are embeddings useful for semantic search?",
+    "gold_section": "12. Embeddings",
+    "ground_truth": "Embeddings represent text as numerical vectors, and semantic embedding models place related meanings near each other, allowing similarity-based search without requiring exact word matches.",
+    "answerable": true,
+    "gold_evidence": [
+      "embeddings represent text as numerical vectors",
+      "related meanings near each other",
+      "similarity-based search"
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "factual",
+    "question": "What does a vector database store besides vectors?",
+    "gold_section": "13. Vector Search",
+    "ground_truth": "A vector database stores vectors together with associated metadata or payloads.",
+    "answerable": true,
+    "gold_evidence": [
+      "vectors together with associated metadata",
+      "payloads"
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "conceptual",
+    "question": "How does Retrieval-Augmented Generation work?",
+    "gold_section": "14. Retrieval-Augmented Generation",
+    "ground_truth": "RAG transforms a user query for retrieval, selects relevant document chunks, supplies them as context to a language model, and generates an answer using that context.",
+    "answerable": true,
+    "gold_evidence": [
+      "transforms a user query for retrieval",
+      "selects relevant document chunks",
+      "language model",
+      "context"
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "conceptual",
+    "question": "Why is chunk overlap useful in document retrieval?",
+    "gold_section": "15. Chunking Strategy",
+    "ground_truth": "Overlapping neighboring chunks can preserve information that would otherwise fall across a chunk boundary.",
+    "answerable": true,
+    "gold_evidence": [
+      "overlapping neighboring chunks",
+      "chunk boundary"
+    ]
+  },
+  {
+    "id": "Q17",
+    "category": "factual",
+    "question": "What does Recall@K measure in retrieval evaluation?",
+    "gold_section": "16. RAG Retrieval Quality",
+    "ground_truth": "Recall at K asks whether relevant information appears among the top K retrieved results.",
+    "answerable": true,
+    "gold_evidence": [
+      "Recall at K",
+      "relevant information",
+      "top K retrieved results"
+    ]
+  },
+  {
+    "id": "Q18",
+    "category": "factual",
+    "question": "What does Mean Reciprocal Rank reward?",
+    "gold_section": "16. RAG Retrieval Quality",
+    "ground_truth": "Mean Reciprocal Rank gives greater credit when the first relevant result appears near the top of the ranking.",
+    "answerable": true,
+    "gold_evidence": [
+      "Mean Reciprocal Rank",
+      "first relevant result",
+      "near the top of the ranking"
+    ]
+  },
+  {
+    "id": "Q19",
+    "category": "conceptual",
+    "question": "What should a RAG system do when the answer is absent from the provided documents?",
+    "gold_section": "17. Grounded Answering",
+    "ground_truth": "It should avoid inventing an answer and can explicitly state that the information was not found in the provided documents.",
+    "answerable": true,
+    "gold_evidence": [
+      "avoid inventing an answer",
+      "information was not found in the provided documents"
+    ]
+  },
+  {
+    "id": "Q20",
+    "category": "conceptual",
+    "question": "Why can a strong RAG prompt not compensate for retrieving the wrong evidence?",
+    "gold_section": "18. Prompt Design for RAG",
+    "ground_truth": "Prompt quality does not replace retrieval quality; if the wrong evidence is retrieved, the model is still given incorrect or irrelevant context.",
+    "answerable": true,
+    "gold_evidence": [
+      "prompt quality does not replace retrieval quality",
+      "wrong evidence",
+      "irrelevant context"
+    ]
+  },
+  {
+    "id": "Q21",
+    "category": "factual",
+    "question": "Which stages can contribute to RAG latency?",
+    "gold_section": "19. Latency and Production Considerations",
+    "ground_truth": "Document processing, embedding creation, vector search, prompt construction, and language-model inference can all contribute to latency.",
+    "answerable": true,
+    "gold_evidence": [
+      "document processing",
+      "embedding creation",
+      "vector search",
+      "prompt construction",
+      "language-model inference"
+    ]
+  },
+  {
+    "id": "Q22",
+    "category": "conceptual",
+    "question": "What must remain constant for a fair comparison of two retrieval configurations?",
+    "gold_section": "20. Experimental Comparison",
+    "ground_truth": "The questions, ground-truth relevance labels, embedding model, and evaluation procedure should remain constant while only the retrieval configuration changes.",
+    "answerable": true,
+    "gold_evidence": [
+      "questions",
+      "ground-truth relevance labels",
+      "embedding model",
+      "evaluation procedure",
+      "retrieval configuration"
+    ]
+  },
+  {
+    "id": "Q23",
+    "category": "unanswerable",
+    "question": "What is Brim's exact production accuracy on this document?",
+    "gold_section": null,
+    "ground_truth": null,
+    "answerable": false,
+    "gold_evidence": []
+  },
+  {
+    "id": "Q24",
+    "category": "unanswerable",
+    "question": "Which company originally created the Brim AI Study Assistant?",
+    "gold_section": null,
+    "ground_truth": null,
+    "answerable": false,
+    "gold_evidence": []
+  }
+]
